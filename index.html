@@ -63921,7 +63921,7 @@ Mb\\x89E\\x1B}4\\xD2I\\xBB\\xB84\\xD3M;\\xFDtt\\xD4Em\\xDDuTWm\\xF5\\xD5X\\xB7\\
           await writer.write({ type: "write", position: chunk.position, data: chunk.data });
         } })) : new BufferTarget();
         output = new Output({ format: new Mp4OutputFormat({ fastStart: writer ? "fragmented" : "in-memory" }), target });
-        const vs = new CanvasSource(canvas, { codec:'avc', bitrate: exportConfigRef.current.mbps * 1e6, bitrateMode: "vbr", latencyMode: "quality", keyFrameInterval: 2 });
+        const vs = new CanvasSource(canvas, { codec:'avc', bitrate: exportConfigRef.current.mbps * 1e6, bitrateMode: "variable", latencyMode: "quality", keyFrameInterval: 2 });
         const as = new AudioBufferSource({ codec: "aac", bitrate: 256e3 });
         output.addVideoTrack(vs, { frameRate: fps });
         output.addAudioTrack(as);
