@@ -63569,7 +63569,7 @@ Mb\\x89E\\x1B}4\\xD2I\\xBB\\xB84\\xD3M;\\xFDtt\\xD4Em\\xDDuTWm\\xF5\\xD5X\\xB7\\
             const activeAlpha = 0.5 + easeOut * 0.5;
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            if (prevLine && t < 1 && frameActiveIdx > 0 && !activeCountdown) {
+            if (false && t < 1 && frameActiveIdx > 0 && !activeCountdown) {
               const rawPrevSize = Math.max(14, Math.round(tSize * 0.78));
               const prevWeight = Math.min(fWeight, 700);
               const fittedPrevSize = fitFontSizeToWidth(prevLine.text, prevWeight, rawPrevSize, 11);
@@ -63710,7 +63710,7 @@ Mb\\x89E\\x1B}4\\xD2I\\xBB\\xB84\\xD3M;\\xFDtt\\xD4Em\\xDDuTWm\\xF5\\xD5X\\xB7\\
                   const activeThemeObj = KARAOKE_THEMES[karaokeThemeRef.current] || KARAOKE_THEMES.neonPink;
                   ctx.fillStyle = activeThemeObj.fill;
                   ctx.shadowColor = activeThemeObj.glow;
-                  ctx.shadowBlur = wordProgress < 1 ? 18 : 10;
+                  ctx.shadowBlur = wordProgress < 1 ? 0 : 0;
                   ctx.fillText(wObj.word, startWordX, activeY);
                   ctx.shadowBlur = 0;
                   ctx.restore();
